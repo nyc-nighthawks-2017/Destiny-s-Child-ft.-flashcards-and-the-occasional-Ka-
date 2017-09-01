@@ -1,0 +1,16 @@
+<div class="container">
+  <h1> Login</h1>
+  <%= erb :'_errors' %>
+
+    <form action="/login" method="post">
+
+      <label for="username">Username:</label>
+      <input type="text" name="user[username]" />
+
+      <label for="password">Password:</label>
+      <input type="password" name="user[password]" />
+
+      <input type="submit" value="Login" />
+    </form>
+    <p><a href="/users/new"> Sign Up </a></p>
+</div>
