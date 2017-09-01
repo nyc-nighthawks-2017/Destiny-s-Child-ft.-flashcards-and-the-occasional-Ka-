@@ -1,0 +1,16 @@
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="/users/new">Sign Up</a></li>
+      <li><a href="/login">Login</a></li>
+
+    </ul>
+  </nav>
+  <h1><%= @deck.title %></h1>
+  <ul>
+      <form action="/decks/<%= @deck.id %>/rounds" method="post">
+        <input type="submit" value="Start Round" />
+      </form>
+  </ul>
+
+ </div>

@@ -1,23 +1,16 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <nav>
+    <ul>
+      <li><a href="/users/new">Sign Up</a></li>
+      <li><a href="/login">Login</a></li>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
-</div>
+    </ul>
+  </nav>
+  <h1> Welcome to Destiny's Child ( ft. Flash Cards )</h1>
+  <ul>
+  <% @decks.each do |deck| %>
+    <li><a href="/decks/<%= deck.id %>"><%= deck.title %></a> - Created by <%= deck.user.username %></li>  
+  <% end %>
+  </ul>
+
+ </div>

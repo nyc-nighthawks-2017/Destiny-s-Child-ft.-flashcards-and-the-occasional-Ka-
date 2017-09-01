@@ -10,6 +10,10 @@ post '/login' do
     else
       @errors = ['Email/Password is invalid']
       erb :'/login'
-
     end
+end
+
+get '/logout' do
+  session.clear
+  redirect '/login'
 end
